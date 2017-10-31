@@ -1,6 +1,7 @@
-package model;
+package com.taras.murzenkov.model;
 
-import annotations.InjectRandomInt;
+import com.taras.murzenkov.annotations.InjectRandomInt;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import quoter.TerminatorQuoterImpl;
 

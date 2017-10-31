@@ -1,4 +1,4 @@
-package annotations;
+package com.taras.murzenkov.annotations;
 
 import java.lang.annotation.Retention;
 

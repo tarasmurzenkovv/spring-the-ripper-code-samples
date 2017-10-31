@@ -1,6 +1,6 @@
-package service;
+package com.taras.murzenkov.service;
 
-import annotations.InjectRandomInt;
+import com.taras.murzenkov.annotations.InjectRandomInt;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Service;
@@ -36,6 +36,7 @@ public class InjectRandomIntBeanPostProcessor implements BeanPostProcessor {
         final int min = annotation.min();
         final int max = annotation.max();
         final int i = random.nextInt(max - min) + min;
+        field.setAccessible(true);
         setField(field, bean, i);
     }
 }
