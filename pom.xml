@@ -15,12 +15,9 @@
     </description>
     <modules>
         <module>bean-post-processor</module>
-        <module>xml-bean-definition-reader</module>
-        <module>two-phase-constructor</module>
-        <module>puzzlers</module>
     </modules>
     <properties>
-        <spring.version>5.0.1.RELEASE</spring.version>
+        <spring-core.version>5.0.1.RELEASE</spring-core.version>
         <junit.version>4.12</junit.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-compiler-plugin.source>1.8</maven-compiler-plugin.source>
@@ -30,18 +27,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version>
+            <version>${spring-core.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
