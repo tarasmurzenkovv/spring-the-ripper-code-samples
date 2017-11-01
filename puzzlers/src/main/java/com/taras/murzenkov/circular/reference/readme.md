@@ -1,0 +1,1 @@
+Solution is based on setter injection

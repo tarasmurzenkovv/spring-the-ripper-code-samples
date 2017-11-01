@@ -16,6 +16,8 @@
     <modules>
         <module>bean-post-processor</module>
         <module>xml-bean-definition-reader</module>
+        <module>two-phase-constructor</module>
+        <module>puzzlers</module>
     </modules>
     <properties>
         <spring.version>5.0.1.RELEASE</spring.version>

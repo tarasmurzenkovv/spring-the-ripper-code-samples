@@ -14,9 +14,12 @@ import static org.springframework.util.ReflectionUtils.setField;
 @Service
 public class InjectRandomIntBeanPostProcessor implements BeanPostProcessor {
     private final Random random = new Random();
+    private ВодаГрейсяРеализация водаГрейся = new ВодаГрейсяРеализация();
 
     @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        водаГрейся.разогреваетсяВода();
         final Field[] declaredFields = bean.getClass().getDeclaredFields();
         Arrays.stream(declaredFields).forEach(field -> {
             final InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
@@ -24,11 +27,6 @@ public class InjectRandomIntBeanPostProcessor implements BeanPostProcessor {
                 injectRandomIntInField(bean, field, annotation);
             }
         });
-        return bean;
-    }
-
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         return bean;
     }
 
